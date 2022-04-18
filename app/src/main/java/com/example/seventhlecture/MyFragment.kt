@@ -46,6 +46,7 @@ class MyFragment : Fragment() {
             view1.animate().apply {
                 scaleX(1.8f)
                 scaleY(1.5f)
+
                 duration = 400
                 interpolator = LinearInterpolator()
                 start()
@@ -59,7 +60,9 @@ class MyFragment : Fragment() {
                 }
             view2.animate().apply {
                 scaleY(6f)
-                scaleX(0.93f)
+                scaleX(0.95f)
+                translationY((view1.height-20).toFloat())
+                translationX((view1.width/6).toFloat())
                 duration = 400
                 interpolator = LinearInterpolator()
                 start()
